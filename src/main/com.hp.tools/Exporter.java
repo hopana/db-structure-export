@@ -1,5 +1,6 @@
 import freemarker.template.TemplateException;
 import model.Table;
+import task.TaskExecutor;
 import utils.DbUtils;
 import utils.FreeMarkerUtils;
 
@@ -8,9 +9,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 数据库结果导出
@@ -23,14 +21,11 @@ public class Exporter {
         try {
             List<Table> tables = Collections.synchronizedList(DbUtils.getInstance().getAllTables());
 
-            for (Table table : tables) {
-                // TODO: 优化采用并发方案
-                // ScheduledExecutorService exportService = Executors.newSingleThreadScheduledExecutor();
-                // exportService.scheduleWithFixedDelay(new ExportTaskOfSymbol(key), 0, Integer.parseInt(System.getProperty("timeInterval")), TimeUnit.MINUTES);ForkJoin
+//            for (Table table : tables) {
+//                table.setColumns(DbUtils.getInstance().getStructOfTable(table.getTableName()));
+//            }
 
-                table.setColumns(DbUtils.getInstance().getStructOfTable(table.getTableName()));
-            }
-
+            new TaskExecutor().invokeTask(tables.subList(0, 100));
 
             Map<String, Object> dataMap = new HashMap<>();
             dataMap.put("database", "spdb");
@@ -41,4 +36,5 @@ public class Exporter {
             e.printStackTrace();
         }
     }
+
 }
