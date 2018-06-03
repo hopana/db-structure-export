@@ -1,4 +1,4 @@
-package utils;
+package com.hp.tools.utils;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

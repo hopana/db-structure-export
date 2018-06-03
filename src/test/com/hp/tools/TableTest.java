@@ -1,9 +1,9 @@
 package com.hp.tools;
 
-import model.Column;
-import model.Table;
+import com.hp.tools.model.Column;
+import com.hp.tools.model.Table;
+import com.hp.tools.utils.DbUtils;
 import org.junit.Test;
-import utils.DbUtils;
 
 import java.sql.Connection;
 import java.sql.SQLException;

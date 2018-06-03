@@ -1,4 +1,4 @@
-package model;
+package com.hp.tools.model;
 
 import lombok.Getter;
 import lombok.Setter;

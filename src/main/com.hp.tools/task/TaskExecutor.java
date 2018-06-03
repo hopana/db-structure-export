@@ -1,8 +1,7 @@
-package task;
+package com.hp.tools.task;
 
-import model.Table;
+import com.hp.tools.model.Table;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 

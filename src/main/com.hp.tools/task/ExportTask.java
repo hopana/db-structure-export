@@ -1,7 +1,7 @@
-package task;
+package com.hp.tools.task;
 
-import model.Table;
-import utils.DbUtils;
+import com.hp.tools.model.Table;
+import com.hp.tools.utils.DbUtils;
 
 import java.util.concurrent.RecursiveTask;
 

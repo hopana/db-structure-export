@@ -3,8 +3,11 @@
     <title>Schema for database ${database}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8">
     <style type="text/css">
+        body {
+            font-family: "微软雅黑", Verdana, Arial, Helvetica, sans-serif;
+        }
+
         .toptext {
-            font-family: verdana, sans-serif;
             color: #000000;
             font-size: 20px;
             font-weight: 600;
@@ -13,7 +16,6 @@
         }
 
         .normal {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
             font-size: 11px;
             font-weight: normal;
             color: #000000;
@@ -21,7 +23,6 @@
         }
 
         .fieldheader {
-            font-family: verdana, sans-serif;
             color: #000000;
             font-size: 12px;
             font-weight: 600;
@@ -29,7 +30,6 @@
         }
 
         .fieldcolumn {
-            font-family: verdana, sans-serif;
             color: #000000;
             font-size: 10px;
             font-weight: 600;
@@ -65,7 +65,6 @@
         }
 
         .headtext {
-            font-family: verdana, sans-serif;
             color: #000000;
             font-size: 12;
             font-weight: 600;
@@ -78,31 +77,15 @@
         }
 
         table.table-content {
-            font-family: "微软雅黑", verdana, arial, sans-serif;
             font-size: 14px;
             color: #444;
-            border-width: 1px;
-            border-color: #999999;
+            border-spacing: 0;
+            border: 1px #grey;
             border-collapse: separate;
         }
 
-        table.table-content th {
-            background-color: #eee;
-            border-width: 1px;
-            padding: 4px;
-            border-style: solid;
-            /*border-color: #a9c6c9;*/
-        }
-
-        table.table-content tr {
-            /*background-color: #d4e3e5;*/
-        }
-
-        table.table-content td {
-            border-width: 1px;
-            padding: 4px;
-            border-style: solid;
-            /*border-color: #a9c6c9;*/
+        table.table-content th,tr,td {
+            padding:4px;
         }
     </style>
 </head>

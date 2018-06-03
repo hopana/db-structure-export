@@ -1,8 +1,10 @@
+package com.hp.tools;
+
+import com.hp.tools.model.Table;
+import com.hp.tools.task.TaskExecutor;
+import com.hp.tools.utils.DbUtils;
+import com.hp.tools.utils.FreeMarkerUtils;
 import freemarker.template.TemplateException;
-import model.Table;
-import task.TaskExecutor;
-import utils.DbUtils;
-import utils.FreeMarkerUtils;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -25,7 +27,7 @@ public class Exporter {
 //                table.setColumns(DbUtils.getInstance().getStructOfTable(table.getTableName()));
 //            }
 
-            new TaskExecutor().invokeTask(tables.subList(0, 100));
+            new TaskExecutor().invokeTask(tables.subList(0, 10));
 
             Map<String, Object> dataMap = new HashMap<>();
             dataMap.put("database", "spdb");

@@ -1,7 +1,7 @@
-package utils;
+package com.hp.tools.utils;
 
-import model.Column;
-import model.Table;
+import com.hp.tools.model.Column;
+import com.hp.tools.model.Table;
 
 import java.io.IOException;
 import java.io.InputStream;
