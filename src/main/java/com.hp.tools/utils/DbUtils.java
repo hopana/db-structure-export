@@ -342,7 +342,7 @@ public class DbUtils {
                 entity.setColumnName(rs.getString("column_name"));
 
                 String dataType = rs.getString("data_type");
-                int dataLength = rs.getInt("data_length");
+                long dataLength = rs.getLong("data_length");
                 int dataPrecision = rs.getInt("data_precision");
                 int data_Scale = rs.getInt("data_Scale");
 

@@ -20,7 +20,7 @@ public class Column {
     /**
      * 长度
      */
-    private Integer dataLength;
+    private Long dataLength;
     /**
      * 数据精度
      */
